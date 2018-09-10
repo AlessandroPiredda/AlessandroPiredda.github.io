@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>esercizi by Alessandro Piredda</title>
+    <link rel="stylesheet" href="css.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  </head>
+<!-- ///////////////////// -->
+  <body>
+
+      <header>
+        <h1 id="Titolo">Pagina Personale <br> di <br> Alessandro Piredda</h1>
+        <br>
+        <h3 id="Anno">Corso di Elementi di informatica e reti di calcolatori <br> anno 2017/18 <br> a cura di Francesco Bruschi </h3>
+
+        <nav id="navbar">
+          <nav class="contenitore"><a href="Indice.html" class="mlink">HOME</a></nav>
+          <nav class="contenitore"><a href="esercizi.html" class="mlink">ESERCIZI</a></nav>
+          <nav class="contenitore"><a href="Progetti.html" class="mlink">PROGETTI</a></nav>
+          <nav class="contenitore"><a href="contatti.html" class="mlink">CONTATTI</a></nav>
+
+        </nav>
+
+      </header>
+
+      <div class="prog12">
+        <strong>ESERCIZIO 1</strong>
+      </div>
+
+      <div id="esercizio">
+
+        <h1 class="tes">TITOLO DELLA PAGINA</h1>
+
+        <div class="tesinfo">
+          COL 1 (info)
+          <div class="tesbox"> alert</div>
+          <button class="tesbutton"> Info</button>
+        </div>
+
+        <div class="tesinfo">
+          COL 2 (success)
+          <div class="tesbox2"> alert</div>
+          <button class="tesbutton2"> Success</button>
+        </div>
+
+        <div class="tesinfo">
+          COL 3 (danger)
+          <div class="tesbox3"> alert</div>
+          <button class="tesbutton3"> Danger</button>
+        </div>
+
+        <div class="tescol">
+          <STRONG>COL 1</STRONG> <br>
+          testo
+        </div>
+
+        <div class="tescol">
+          <STRONG>COL 2</STRONG> <br>
+          testo
+        </div>
+
+        <p class="testes">Testo allineato a sinistra, testo allineato a sinistra,
+          testo allineato a sinistra, testo allineato a sinistra, testo allineato a sinistra,
+          testo allineato a sinistra, testo allineato a sinistra!</p>
+
+      </div>
+
+    <div class="prog12"><strong>ESERCIZIO 2</strong></div>
+
+        <div id="esercizio2">
+          <div id="quadrato" class="top-left"></div>
+
+          <script>
+
+            function Onclick(){
+              if ($("#quadrato").hasClass("top-left"))
+                {
+                $("#quadrato").removeClass("top-left")
+                $("#quadrato").addClass("top-right")
+                }
+              else if ($("#quadrato").hasClass("top-right"))
+                {
+                  $("#quadrato").removeClass("top-right")
+                  $("#quadrato").addClass("bottom-right")
+                }
+              else if ($("#quadrato").hasClass("bottom-right"))
+                {
+                  $("#quadrato").removeClass("bottom-right")
+                  $("#quadrato").addClass("bottom-left")
+                }
+              else
+                {
+                  $("#quadrato").removeClass("bottom-left")
+                  $("#quadrato").addClass("top-left")
+                }
+            }
+
+            $("#quadrato").click(Onclick);
+
+          </script>
+        </div>
+
+
+    <div class="prog12"><strong>ESERCIZIO 3</strong></div>
+
+        <div id="esercizio2">
+
+          <div id="quadrato1" class="q center"></div>
+          <div id="quadratino1" class=" center"></div>
+
+          <script>
+
+            function primo_giro_rosso(){
+              $("#quadrato1").addClass("rotate");
+            }
+
+            function quadratino_on(){
+              $("#quadratino1").addClass("qino-on");
+            }
+
+            function rotateforeva(){
+              $("#quadrato1").addClass("rotate-orario");
+              $("#quadratino1").addClass("rotate-antiorario");
+            }
+
+            $("#quadrato1").click(onclick);
+
+
+            function onclick(){
+              if($("#quadratino1").hasClass("qino-on"))
+                rotateforeva();
+              else if($("#quadrato1").hasClass("rotate"))
+                quadratino_on();
+              else
+              primo_giro_rosso();
+            }
+
+          </script>
+
+        </div>
+
+      <div class="prog12"><strong>ESERCIZIO 4</strong></div>
+
+        <div id="qcentrale4">
+            <div id="quadrato1e4" class="q1e4 position1e4" ></div>
+            <div id="quadrato2e4" class="q2e4 position2e4" ></div>
+            <div id="quadrato3e4" class="q3e4 position3e4" ></div>
+            <div id="quadrato4e4" class="q4e4 position4e4" ></div>
+        </div>
+
+        <script>
+
+          function scambioquadrati_alti(){
+           $("#quadrato1e4").addClass("position2e4");
+           $("#quadrato1e4").removeClass("position1e4");
+           $("#quadrato2e4").addClass("position1e4");
+           $("#quadrato2e4").removeClass("position2e4");
+          }
+
+          function rotazione_intorno(){
+            $("#quadrato1e4").addClass("spinaround2e4");
+            $("#quadrato2e4").addClass("spinaround1e4");
+            $("#quadrato3e4").addClass("spinaround3e4");
+            $("#quadrato4e4").addClass("spinaround4e4");
+          }
+
+          $("#quadrato1e4").click(onclick);
+
+          function onclick() {
+            if ($("#quadrato1e4").hasClass("position2e4"))
+              rotazione_intorno();
+            else
+              scambioquadrati_alti();
+          }
+
+          $("#quadrato1e4").mouseover(pauseall);
+          $("#quadrato1e4").mouseout(liveall);
+
+          $("#quadrato2e4").mouseover(pauseall);
+          $("#quadrato2e4").mouseout(liveall);
+
+          $("#quadrato3e4").mouseover(pauseall);
+          $("#quadrato3e4").mouseout(liveall);
+
+          $("#quadrato4e4").mouseover(pauseall);
+          $("#quadrato4e4").mouseout(liveall);
+
+          function pauseall(){
+            $("#quadrato1e4").addClass("animationstope4");
+            $("#quadrato2e4").addClass("animationstope4");
+            $("#quadrato3e4").addClass("animationstope4");
+            $("#quadrato4e4").addClass("animationstope4");
+          }
+
+          function liveall(){
+            $("#quadrato1e4").removeClass("animationstope4");
+            $("#quadrato2e4").removeClass("animationstope4");
+            $("#quadrato3e4").removeClass("animationstope4");
+            $("#quadrato4e4").removeClass("animationstope4");
+          }
+
+        </script>
+
+
+    <div class="boxfinale2">ale è il king del mondo</div>
+
+      <a href="#Titolo"><div id="tornasu">^</div></a>
+
+      <footer>
+        <div id="footext">Any question? contact me! </div>
+
+        <div id="footext2">
+          <a href="mailto:gd.apiredda@gmail.com"><img class="gdapire" src="img/gdpire.png"></a>
+          <a href="https://www.facebook.com/alessandro.d.piredda"><img class="fblogo" src="img/fb.png"></a>
+          <a href="https://www.instagram.com/aledpire"><img class="instalogo" src="img/insta.png"></a>
+          <a href="https://twitter.com/GD_AlePire"><img class="twitterlogo" src="img/twitter.png"></a>
+        </div>
+
+      </footer>
+
+
+  </body>
+
+</html>

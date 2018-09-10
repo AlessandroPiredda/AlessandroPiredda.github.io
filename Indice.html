@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>World by Alessandro Piredda</title>
+    <link rel="stylesheet" href="css.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+    </style>
+
+    <script src="script.js" defer></script>
+
+  </head>
+<!-- ///////////////////// -->
+  <body>
+
+      <header>
+        <h1 id="Titolo">Pagina Personale <br> di <br> Alessandro Piredda</h1>
+        <br>
+        <h3 id="Anno">Corso di Elementi di informatica e reti di calcolatori <br> anno 2017/18 <br> a cura di Francesco Bruschi </h3>
+
+        <nav id="navbar">
+          <nav class="contenitore"><a href="Indice.html" class="mlink">HOME</a></nav>
+          <nav class="contenitore"><a href="esercizi.html" class="mlink">ESERCIZI</a></nav>
+          <nav class="contenitore"><a href="Progetti.html" class="mlink">PROGETTI</a></nav>
+          <nav class="contenitore"><a href="contatti.html" class="mlink">CONTATTI</a></nav>
+
+        </nav>
+
+      </header>
+
+      <main>
+
+        <div id="Intro">
+          <img class="fotoprofilo" src="img/aleprofilo.jpg">
+
+          <side class="squarebox"> <strong class="nomeale">Alessandro Piredda</strong>
+          <ul>
+            <li>Studente al Politecnico di Milano</li>
+            <li>Videogiocatore incallito (ID #OcaSelvaggia)</li>
+            <li>Appassionato di procioni</li>
+
+          </ul>
+          <br>
+          <p class="descrizionepagina">Questa è la pagina personale realizzata per il corso di Elementi di informatica e reti
+            di calcolatori.
+            Nella pagina potrete troverete alcuni dei miei lavori durante l'anno accademico, specialmente foto
+            di progetti realizzati con i miei compagni.
+          </p>
+          <img class="firma" src="img/firma.png">
+        </side>
+        </div>
+
+        <div class="fotoslide">
+
+          <img class="Myslide" src="img/C1.jpg" >
+          <img class="Myslide" src="img/F5.jpg" >
+          <img class="Myslide" src="img/L2.jpg" >
+          <img class="Myslide" src="img/A1.jpg" >
+          <img class="Myslide" src="img/L1.jpg" >
+          <img class="Myslide" src="img/C4.jpg" >
+          <div class="centered">Foto di Alessandro piredda @salonedelmobile2018</div>
+
+          <script>
+
+            var slideIndex = 0;
+            carousel();
+
+            function carousel() {
+            var i;
+            var x = document.getElementsByClassName("Myslide");
+            for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {slideIndex = 1}
+            x[slideIndex-1].style.display = "block";
+            setTimeout(carousel, 3500);
+            }
+
+          </script>
+
+        </div>
+
+        <a href="#Titolo"><div id="tornasu">^</div></a>
+      </main>
+
+      <footer>
+        <div id="footext">Any question? contact me! </div>
+
+        <div id="footext2">
+          <a href="mailto:gd.apiredda@gmail.com"><img class="gdapire" src="img/gdpire.png"></a>
+          <a href="https://www.facebook.com/alessandro.d.piredda"><img class="fblogo" src="img/fb.png"></a>
+          <a href="https://www.instagram.com/aledpire"><img class="instalogo" src="img/insta.png"></a>
+          <a href="https://twitter.com/GD_AlePire"><img class="twitterlogo" src="img/twitter.png"></a>
+
+        </div>
+
+      </footer>
+
+  </body>
+
+</html>
